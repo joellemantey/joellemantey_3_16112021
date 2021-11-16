@@ -1,0 +1,5 @@
+@each $size, $font-size in $font-sizes {
+    .text-#{$size} {
+      font-size: $font-size;
+    }
+}
