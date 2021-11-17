@@ -1,0 +1,9 @@
+@mixin font-size($size) {
+    @if map-has-key($font-sizes, $size) {
+        $value: map-get($map: $font-sizes, $key: $size);
+        font-size: $value;
+    }
+    @else {
+        @warn "Unknown size"
+    }
+}

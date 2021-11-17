@@ -2,11 +2,12 @@
 
 //functions
 @import "utils/variables";
-//mixins
+@import "utils/mixins";
 
 @import "base/base";
 @import "base/type";
 
 @import "composants/navbar";
-
-@import "composants/button"
+@import "composants/button";
+@import "composants/card";
+@import "composants/badge";
