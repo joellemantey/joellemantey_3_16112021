@@ -1,6 +1,7 @@
 @import "../utils/variables";
 @import "../utils/mixins";
 
+
 .logo {
     width: 50%;
 }
@@ -83,7 +84,7 @@
 
 .restaurants {
     background-color: #F6F6F6;
-    padding: 50px 20px;
+    padding: 50px 20px 60px;
 
     .badge {
         position: absolute;
@@ -102,7 +103,7 @@
     .card__body {
         display: flex;
         justify-content: space-between;
-        margin: 0px 0px 6px;
+        margin: 0 0 6px;
     }
 
     .text-l {
@@ -150,4 +151,3 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-

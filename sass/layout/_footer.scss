@@ -1,0 +1,42 @@
+
+footer {
+  background-color: #353535;
+  color: white;
+
+  h3{
+    padding: 26px 30px 20px;
+    margin: 0;
+  }
+
+  ul {
+    padding: 0 30px 30px;
+    margin: 0;
+    list-style: none;
+  }
+
+  .fa-utensils {
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  .fa-hands-helping {
+    font-size: 10px;
+    margin-right: 10px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  a:link {
+    color: white;
+    //margin-left: 10px;
+  }
+
+  li{
+    margin: 10px 0;
+  }
+
+}
+
+
