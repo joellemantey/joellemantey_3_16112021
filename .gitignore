@@ -3,4 +3,4 @@
 *.sass.map
 *.scss.map
 images/.DS_Store
-css/
+.idea

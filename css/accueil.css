@@ -1,0 +1,133 @@
+/*fonts */
+/*colors*/
+.logo {
+  width: 50%;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #EAEAEA;
+  height: 46px;
+  margin: 0;
+}
+.location i {
+  margin-right: 20px;
+}
+
+.text-2xl {
+  font-weight: 500;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #F6F6F6;
+}
+.description p {
+  margin: 0 30px 30px;
+  font-weight: 100;
+}
+.description .text-2xl {
+  font-weight: 500;
+  margin: 40px 60px 20px;
+}
+.description .btn {
+  margin-bottom: 50px;
+}
+
+.functioning {
+  margin-bottom: 60px;
+}
+
+.card--more-rounded {
+  width: 88%;
+  margin-left: 30px;
+  overflow: visible;
+}
+.card--more-rounded:hover {
+  background-color: #F6EDFF;
+}
+.card--more-rounded:hover i {
+  color: #9356DC;
+}
+.card--more-rounded i {
+  margin: 0 20px 0 10px;
+  color: #7E7E7E;
+  font-size: 18px;
+}
+.card--more-rounded + .card--more-rounded {
+  margin-top: 1.5rem;
+}
+
+.badge {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 50px 20px 60px;
+}
+.restaurants .badge {
+  position: absolute;
+  top: 10%;
+  left: 86%;
+  background-color: #99E2D0;
+  color: #008765;
+  border-radius: 2px;
+  box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.1);
+}
+.restaurants .text-2xl {
+  margin: 0 0px 20px;
+}
+.restaurants .card__body {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 6px;
+}
+.restaurants .text-l {
+  display: flex;
+  flex-direction: column;
+}
+.restaurants .text-l p {
+  font-weight: 100;
+}
+.restaurants strong {
+  margin: 6px 0;
+}
+.restaurants p {
+  margin: 0;
+}
+.restaurants .fa-heart {
+  display: flex;
+  align-self: center;
+  color: #7E7E7E;
+  font-size: 20px;
+}
+
+.card img {
+  height: 180px;
+}
+.card + .card {
+  margin-top: 20px;
+}
+
+.fa-heart:hover {
+  font-weight: 900;
+  background: #FF79DA;
+  background: -webkit-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
+  background: -moz-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/*# sourceMappingURL=accueil.css.map */
