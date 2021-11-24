@@ -16,6 +16,8 @@
 
 .reception {
   width: 100%;
+  height: 280px;
+  object-fit: cover;
 }
 
 .dish-restaurants {
@@ -108,4 +110,4 @@
   padding: 10px 30px;
 }
 
-/*# sourceMappingURL=lapalettedugout.css.map */
+/*# sourceMappingURL=lanoteenchantee.css.map */

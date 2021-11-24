@@ -82,6 +82,16 @@
     transform: translateY(-50%) translateX(-50%);
 }
 
+@keyframes heart {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 .restaurants {
     background-color: #F6F6F6;
     padding: 50px 20px 60px;
@@ -132,6 +142,8 @@
 }
 
 .card {
+    position: relative;
+
     img {
         height: 180px;
     }
@@ -139,11 +151,23 @@
     & + & {
         margin-top: 20px;
     }
+
+    & a::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 54px;
+        right: 0;
+    }
 }
 
 
 .fa-heart:hover {
-   font-weight: 900;
+    animation-duration: 0.8s;
+    animation-name: heart;
+    font-weight: 900;
     background: #FF79DA;
     background: -webkit-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
     background: -moz-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
