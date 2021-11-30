@@ -14,3 +14,33 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    75% {
+        opacity: .50;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.fade-in:hover{
+    animation-duration: 1s;
+    animation-name: fadeIn;
+    animation-fill-mode: both;
+}
+
+.fa-heart:hover {
+    font-weight: 900;
+    background: #FF79DA;
+    background: -webkit-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
+    background: -moz-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
+    background: linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+

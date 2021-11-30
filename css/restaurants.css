@@ -4,6 +4,16 @@
   width: 50%;
   margin-right: auto;
 }
+@media (min-width: 1024px) {
+  .logo {
+    width: 20%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .logo {
+    width: 30%;
+  }
+}
 
 .return {
   margin-right: auto;
@@ -16,8 +26,18 @@
 
 .reception {
   width: 100%;
-  height: 280px;
-  object-fit: cover;
+}
+@media (min-width: 1024px) {
+  .reception {
+    height: 400px;
+    object-fit: cover;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .reception {
+    height: 300px;
+    object-fit: cover;
+  }
 }
 
 .dish-restaurants {
@@ -28,6 +48,13 @@
   border-top-left-radius: 30px;
   position: relative;
 }
+@media (min-width: 1024px) {
+  .dish-restaurants {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
 .dish-restaurants h3 {
   display: flex;
   justify-content: space-between;
@@ -37,8 +64,27 @@
 .dish-restaurants h3 i {
   font-weight: 100;
 }
+@media (min-width: 1024px) {
+  .dish-restaurants .card-block {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  .dish-restaurants .details {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .dish-restaurants .title {
   margin: 36px 0 16px 20px;
+}
+@media (min-width: 1024px) {
+  .dish-restaurants .title {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .dish-restaurants .title::after {
   content: "";
@@ -48,102 +94,136 @@
   margin-top: 4px;
   background-color: #99E2D0;
 }
+
 @keyframes rotate {
   to {
     transform: rotateZ(360deg);
   }
 }
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.dish-restaurants .card:nth-of-type(1) {
+.card:nth-of-type(1) {
   animation-delay: 0.25s;
 }
-.dish-restaurants .card:nth-of-type(2) {
+
+.card:nth-of-type(2) {
   animation-delay: 0.5s;
 }
-.dish-restaurants .card:nth-of-type(3) {
+
+.card:nth-of-type(3) {
   animation-delay: 0.75s;
 }
-.dish-restaurants .card:nth-of-type(4) {
+
+.card:nth-of-type(4) {
   animation-delay: 1s;
 }
-.dish-restaurants .card:nth-of-type(5) {
+
+.card:nth-of-type(5) {
   animation-delay: 1.25s;
 }
-.dish-restaurants .card:nth-of-type(6) {
+
+.card:nth-of-type(6) {
   animation-delay: 1.5s;
 }
-.dish-restaurants .card:nth-of-type(7) {
+
+.card:nth-of-type(7) {
   animation-delay: 1.75s;
 }
-.dish-restaurants .card:nth-of-type(8) {
+
+.card:nth-of-type(8) {
   animation-delay: 2s;
 }
-.dish-restaurants .card:nth-of-type(9) {
+
+.card:nth-of-type(9) {
   animation-delay: 2.25s;
 }
-.dish-restaurants .card:nth-of-type(10) {
+
+.card:nth-of-type(10) {
   animation-delay: 2.5s;
 }
-.dish-restaurants .card {
+
+.card {
   height: 70px;
   margin: 10px 10px 10px 15px;
   background-color: white;
   animation: fadeIn 0.5s linear;
   animation-fill-mode: both;
 }
-.dish-restaurants .card:hover .check {
+@media (min-width: 1024px) {
+  .card {
+    width: 400px;
+  }
+}
+.card:hover .check {
   width: 60px;
   transform: translateX(0%);
 }
-.dish-restaurants .card:hover .check i {
+.card:hover .check i {
   animation-duration: 1s;
   animation-name: rotate;
 }
-.dish-restaurants .card .check {
+.card :first-child {
+  position: relative;
+}
+.card .check {
   display: flex;
   justify-content: center;
   align-items: center;
   align-self: stretch;
   margin: -14px -24px -14px 24px;
-  transition: all ease 1s;
+  transition: transform ease 1s, width ease 1s;
   width: 0;
   color: white;
   background-color: #99E2D0;
   transform: translateX(100%);
 }
-.dish-restaurants .card .card__body {
+.card .card__body {
   display: flex;
   align-items: flex-end;
   padding-left: 10px;
 }
-.dish-restaurants .card .text-xl {
+.card .text-xl {
   flex: 1;
   min-width: 0;
 }
-.dish-restaurants .tarif {
+
+.tarif {
   margin-left: 10px;
 }
-.dish-restaurants .text-xl p {
+
+.text-xl p {
   font-weight: 100;
   font-size: 16px;
   margin: 6px 0 0 0;
 }
-.dish-restaurants .overflow-ellipsis {
+
+.overflow-ellipsis {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
 
+.fa-heart:hover {
+  animation-duration: 1s;
+  animation-name: heart;
+  font-weight: 900;
+  background: #FF79DA;
+  background: -webkit-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
+  background: -moz-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
+  background: linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes heart {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .btn-order {
   display: flex;
   justify-content: center;
@@ -153,4 +233,4 @@
   padding: 10px 30px;
 }
 
-/*# sourceMappingURL=lanoteenchantee.css.map */
+/*# sourceMappingURL=restaurants.css.map */

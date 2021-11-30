@@ -7,3 +7,11 @@
         @warn "Unknown size"
     }
 }
+
+
+@mixin respond-to($name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+        @content;
+    }
+}
+

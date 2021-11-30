@@ -24,3 +24,18 @@ $font-sizes: (
   "2xl": 24px,
   "3xl": 28px,
 );
+
+$total-items: 5;
+
+$test: 600px;
+$test2: 1024px;
+
+@use "sass:string";
+//Responsive
+$breakpoints: (
+        "desktop": (min-width: $test2),
+        /* @see https://sass-lang.com/documentation/interpolation */
+        //"tablette": #{'(min-width: #{$test}) and (max-width: 1023px)'}, => pas propre
+        //"tablette": (min-width: $test) #{"and"} (max-width: ($test2 - 1px)),=> moyennement propre
+        "tablette": (min-width: $test) string.unquote("and") (max-width: ($test2 - 1px)), // plus propre
+);
