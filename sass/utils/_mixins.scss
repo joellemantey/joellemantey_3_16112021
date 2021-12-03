@@ -15,3 +15,9 @@
     }
 }
 
+//ici j'utilise une mixin car les placeholders ne fonctionne pas avec les media query
+@mixin flex-column(){
+    display: flex;
+    flex-direction: column;
+}
+

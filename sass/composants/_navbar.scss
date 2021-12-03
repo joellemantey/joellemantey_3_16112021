@@ -1,9 +1,18 @@
-
 .navbar {
-    height: $navbar-height;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 8px 0 rgba($color: #000000, $alpha: 0.3);
-    position: sticky;
+  height: $navbar-height;
+  @extend %flex-center;
+  box-shadow: 0 0 8px 0 rgba($color: #000000, $alpha: 0.3);
+  position: sticky;
+
+  .logo {
+    width: 50%;
+
+    @include respond-to("desktop") {
+      width: 20%;
+    }
+
+    @include respond-to("tablette") {
+      width: 30%;
+    }
+  }
 }

@@ -1,23 +1,23 @@
 .card {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-shadow: 0 6px 6px 0 rgba($color: #000000, $alpha: 0.1);
-    border-radius: 10px;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 6px 6px 0 rgba($color: #000000, $alpha: 0.1);
+  border-radius: 10px;
+  overflow: hidden;
 
-    &--more-rounded {
-        border-radius: 20px;
-        background-color: $gray100;
-    }
+  &--more-rounded {
+    border-radius: 20px;
+    background-color: $gray100;
+  }
 
-    img {
-        object-fit: cover;
-        width: 100%;
-    }
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
 
-    &__body {
-        padding: 14px 24px;
-        flex: 1 1 100%;
-    }
+  &__body {
+    padding: 14px 24px;
+    flex: 1 1 100%;
+  }
 }

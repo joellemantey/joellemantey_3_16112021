@@ -1,25 +1,16 @@
 /*fonts */
 /*colors*/
-.logo {
-  width: 50%;
-  margin-right: auto;
-}
-@media (min-width: 1024px) {
-  .logo {
-    width: 20%;
-  }
-}
-@media (min-width: 600px) and (max-width: 1023px) {
-  .logo {
-    width: 30%;
-  }
+.btn-order, .card .check, .return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .return {
-  margin-right: auto;
-  margin-left: 20px;
-}
-.return .fa-arrow-left {
+  position: absolute;
+  left: 0;
+  height: 60px;
+  width: 60px;
   text-decoration: none;
   color: black;
 }
@@ -100,46 +91,6 @@
     transform: rotateZ(360deg);
   }
 }
-.card:nth-of-type(1) {
-  animation-delay: 0.25s;
-}
-
-.card:nth-of-type(2) {
-  animation-delay: 0.5s;
-}
-
-.card:nth-of-type(3) {
-  animation-delay: 0.75s;
-}
-
-.card:nth-of-type(4) {
-  animation-delay: 1s;
-}
-
-.card:nth-of-type(5) {
-  animation-delay: 1.25s;
-}
-
-.card:nth-of-type(6) {
-  animation-delay: 1.5s;
-}
-
-.card:nth-of-type(7) {
-  animation-delay: 1.75s;
-}
-
-.card:nth-of-type(8) {
-  animation-delay: 2s;
-}
-
-.card:nth-of-type(9) {
-  animation-delay: 2.25s;
-}
-
-.card:nth-of-type(10) {
-  animation-delay: 2.5s;
-}
-
 .card {
   height: 70px;
   margin: 10px 10px 10px 15px;
@@ -160,13 +111,40 @@
   animation-duration: 1s;
   animation-name: rotate;
 }
-.card :first-child {
+.card:first-child {
   position: relative;
 }
+.card:nth-of-type(1) {
+  animation-delay: 0.25s;
+}
+.card:nth-of-type(2) {
+  animation-delay: 0.5s;
+}
+.card:nth-of-type(3) {
+  animation-delay: 0.75s;
+}
+.card:nth-of-type(4) {
+  animation-delay: 1s;
+}
+.card:nth-of-type(5) {
+  animation-delay: 1.25s;
+}
+.card:nth-of-type(6) {
+  animation-delay: 1.5s;
+}
+.card:nth-of-type(7) {
+  animation-delay: 1.75s;
+}
+.card:nth-of-type(8) {
+  animation-delay: 2s;
+}
+.card:nth-of-type(9) {
+  animation-delay: 2.25s;
+}
+.card:nth-of-type(10) {
+  animation-delay: 2.5s;
+}
 .card .check {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   align-self: stretch;
   margin: -14px -24px -14px 24px;
   transition: transform ease 1s, width ease 1s;
@@ -204,7 +182,7 @@
 .fa-heart:hover {
   animation-duration: 1s;
   animation-name: heart;
-  font-weight: 900;
+  font-weight: bold;
   background: #FF79DA;
   background: -webkit-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
   background: -moz-linear-gradient(to top, #FF79DA 0%, #9356DC 100%);
@@ -225,8 +203,6 @@
   }
 }
 .btn-order {
-  display: flex;
-  justify-content: center;
   margin: 45px 0 0;
 }
 .btn-order .btn {

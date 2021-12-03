@@ -1,28 +1,11 @@
 @import "../utils/variables";
 @import "../utils/mixins";
-
-
-.logo {
-  width: 50%;
-
-  @include respond-to("desktop") {
-    width: 20%;
-  }
-
-  @include respond-to("tablette") {
-    width: 30%;
-  }
-
-
-}
+@import "../utils/placeholder";
 
 .location {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @extend %flex-center;
   background: $gray200;
   height: 46px;
-  margin: 0;
 
   i {
     margin-right: 20px;
@@ -30,25 +13,24 @@
 }
 
 .text-2xl {
-  font-weight: 500;
+  font-weight: $font-500;
   margin-left: 20px;
   margin-top: 50px;
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @extend %flex-center;
+  @extend %flex-column;
   text-align: center;
   background: $gray100;
 
   p {
     margin: 0 30px 30px;
-    font-weight: 100;
+    font-weight: $font-100;
   }
 
   .text-2xl {
-    font-weight: 500;
+    font-weight: $font-500;
     margin: 40px 60px 20px;
   }
 
@@ -57,15 +39,17 @@
   }
 }
 
+.list {
+  display: flex;
+  flex-direction: column;
+}
 
 .functioning {
-
-
   margin-bottom: 60px;
 
   @include respond-to("desktop") {
     margin-top: 25px;
-    .card + .card{
+    .card + .card {
       margin-top: 0;
       margin-right: 30px;
     }
@@ -77,28 +61,26 @@
     }
 
     .list {
-      display: flex;
+      flex-direction: row;
     }
   }
 
-  @include respond-to("tablette"){
+  @include respond-to("tablette") {
     margin-top: 25px;
-    .card + .card{
+    .card + .card {
       margin-top: 0;
       margin-right: 10px;
     }
 
     .text-2xl {
-      //font-size: 14px;
       margin-right: 20px;
       margin-top: 30px;
       text-align: center;
     }
 
     .list {
-      display: flex;
+      flex-direction: row;
     }
-
   }
 }
 
@@ -115,32 +97,32 @@
     }
   }
 
-  .card__body{
-    @include respond-to("desktop"){
-      text-align: center;
-    }
+  & + & {
+    margin-top: 1.5rem;
 
-    @include respond-to("tablette"){
-      font-size: 14px;
-      padding: 5px 5px 5px 16px;
+    @include respond-to("desktop") {
+      margin-top: 0;
     }
   }
 
   i {
     margin: 0 20px 0 10px;
     color: $gray300;
-    font-size: 18px;
+    @include font-size("xl");
 
-    @include respond-to("tablette"){
+    @include respond-to("tablette") {
       margin: 5px;
     }
   }
 
-  & + & {
-    margin-top: 1.5rem;
+  .card__body {
+    @include respond-to("desktop") {
+      text-align: center;
+    }
 
-    @include respond-to("desktop"){
-      margin-top: 0px;
+    @include respond-to("tablette") {
+      @include font-size("m");
+      padding: 5px 5px 5px 16px;
     }
   }
 }
@@ -151,12 +133,12 @@
   left: 0;
   transform: translateY(-50%) translateX(-50%);
 
-  @include respond-to("desktop"){
+  @include respond-to("desktop") {
     top: 0;
     left: 50%;
   }
 
-  @include respond-to("tablette"){
+  @include respond-to("tablette") {
     top: 0;
     left: 50%;
   }
@@ -164,29 +146,28 @@
 
 
 .restaurants {
+  background-color: $gray100;
+  padding: 50px 20px 60px;
+
   @include respond-to("desktop") {
     width: 100%;
   }
 
   .list {
     @include respond-to("desktop") {
-      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;
     }
 
     @include respond-to("tablette") {
-      display: flex;
+      flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-around;
     }
   }
 
-  background-color: #F6F6F6;
-  padding: 50px 20px 60px;
-
   .card {
-
     @include respond-to("desktop") {
       margin: 20px;
       height: 250px;
@@ -210,11 +191,15 @@
   }
 
   .text-2xl {
-    margin: 0 -0px 20px 60px;
+    margin: 0 -0px 20px 0px;
 
-    @include respond-to("desktop"){
+    @include respond-to("desktop") {
       text-align: center;
       margin-left: 0;
+    }
+
+    @include respond-to("tablette") {
+      text-align: center;
     }
   }
 
@@ -225,11 +210,10 @@
   }
 
   .text-l {
-    display: flex;
-    flex-direction: column;
+     @extend %flex-column;
 
     p {
-      font-weight: 100;
+      font-weight: $font-100;
     }
   }
 
@@ -243,17 +227,12 @@
 
   .fa-heart {
     color: $gray300;
-    font-size: 20px;
+    @include font-size("2xl");
     margin-top: 10px;
   }
 }
 
 .card {
-  position: relative;
-
-  //@include respond-to("desktop"){
-  //}
-
   img {
     height: 180px;
   }
@@ -272,5 +251,3 @@
     right: 0;
   }
 }
-
-

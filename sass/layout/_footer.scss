@@ -3,7 +3,7 @@ footer {
   background-color: #353535;
   color: white;
 
-  h3{
+  h3 {
     padding: 26px 30px 20px;
     margin: 0;
   }
@@ -24,16 +24,14 @@ footer {
     margin-right: 10px;
   }
 
-  a{
+  a {
     text-decoration: none;
+    &:link {
+      color: white;
+    }
   }
 
-  a:link {
-    color: white;
-    //margin-left: 10px;
-  }
-
-  li{
+  li {
     margin: 10px 0;
   }
 

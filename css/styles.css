@@ -339,6 +339,12 @@ template {
 
 /*fonts */
 /*colors*/
+.loader-overlay, .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Base */
 * {
   box-sizing: border-box;
@@ -442,11 +448,21 @@ footer li {
 
 .navbar {
   height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
   position: sticky;
+}
+.navbar .logo {
+  width: 50%;
+}
+@media (min-width: 1024px) {
+  .navbar .logo {
+    width: 20%;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .navbar .logo {
+    width: 30%;
+  }
 }
 
 .btn {
@@ -495,24 +511,6 @@ footer li {
   font-size: 14px;
 }
 
-.loader-overlay {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 1000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: invisible 5s forwards;
-}
-
-.loader-backdrop {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 .loader {
   color: #99E2D0;
   font-size: 90px;
@@ -525,6 +523,14 @@ footer li {
   position: relative;
   transform: translateZ(0);
   animation: loader 1.7s infinite ease, round 1.7s infinite ease;
+}
+.loader-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1000;
+  animation: invisible 5s forwards;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @keyframes loader {

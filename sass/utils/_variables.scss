@@ -1,6 +1,11 @@
+@use "sass:string";
+
 /*fonts */
 $default-font: "Roboto", sans-serif;
 $title-font: "Shrikhand", sans-serif;
+
+$font-500: 500;
+$font-100: 100;
 
 /*colors*/
 $primary-color:#9356DC;
@@ -30,7 +35,6 @@ $total-items: 5;
 $test: 600px;
 $test2: 1024px;
 
-@use "sass:string";
 //Responsive
 $breakpoints: (
         "desktop": (min-width: $test2),
